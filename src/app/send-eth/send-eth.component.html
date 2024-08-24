@@ -1,0 +1,17 @@
+<div class="eth-form-container">
+  <div class="eth-form-group">
+    <label for="address">Dirección ETH:</label>
+    <input id="address" [(ngModel)]="recipientAddress" placeholder="0x..." />
+  </div>
+
+  <div class="eth-form-group">
+    <label for="amount">Cantidad (ETH):</label>
+    <input id="amount" type="number" [(ngModel)]="amount" />
+  </div>
+
+  <button class="eth-button" (click)="sendEth()">Enviar ETH</button>
+
+  <p *ngIf="transactionHash" class="transaction-hash">
+    Hash de transacción: {{ transactionHash }}
+  </p>
+</div>
